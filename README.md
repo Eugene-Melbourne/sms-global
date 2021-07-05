@@ -21,13 +21,6 @@ API endpoints ask a user to provide their API Keys that they have generated on S
 - authentication: "Basic Auth"
 - status: not functional
 
-### It displays a <a href="https://swagger.io/" target="_blank"> Swagger </a> OpenAPI documentation of the `/api` endpoints. 
-- method: **GET**
-- end point: **/docs**
-- authentication: "no"
-- status: under consturction
-
-
 ### API Specification
 
 #### Request Headers
@@ -40,3 +33,9 @@ API endpoints ask a user to provide their API Keys that they have generated on S
 - Type : "Basic Auth"
 - Username "take your REST API Key from <a href="https://smsglobal.com" target="_blank"> SMSGlobal </a>"
 - Password "take your REST API Secret from <a href="https://smsglobal.com" target="_blank"> SMSGlobal </a>"
+
+## To display a <a href="https://swagger.io/" target="_blank"> Swagger </a> OpenAPI documentation of the `/api` endpoints. 
+- method: **GET**
+- end point: **/docs**
+- authentication: "no"
+- status: under consturction
