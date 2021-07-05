@@ -25,7 +25,4 @@ Route::group([], function () {
 
     Route::get('/message', [SmsGlobalController::class, 'get_message'])
         ->name('message-get');
-
-    Route::get('/docs', [SmsGlobalController::class, 'get_docs'])
-        ->name('docs');
 });

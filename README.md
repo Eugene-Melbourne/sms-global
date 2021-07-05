@@ -23,7 +23,7 @@ API endpoints ask a user to provide their API Keys that they have generated on S
 
 ### It displays a <a href="https://swagger.io/" target="_blank"> Swagger </a> OpenAPI documentation of the `/api` endpoints. 
 - method: **GET**
-- end point: **/api/docs**
+- end point: **/docs**
 - authentication: "no"
 - status: under consturction
 

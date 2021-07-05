@@ -114,13 +114,4 @@ class SmsGlobalController extends Controller
     }
 
 
-    /**
-     * It displays a Swagger OpenAPI documentation of the `/api` endpoints. 
-     */
-    public function get_docs(Request $request): string
-    {
-        return ' under construction ';
-    }
-
-
 }
