@@ -38,4 +38,4 @@ API endpoints ask a user to provide their API Keys that they have generated on S
 - method: **GET**
 - end point: **/docs**
 - authentication: "no"
-- status: under consturction
+- details: return YAML file for Swagger

@@ -9,12 +9,42 @@ use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use function response;
 
+/**
+ * @OA\Info(
+ *      version="0.1",
+ *      title="SmsGlobal API", 
+ *      description="Swagger OpenApi description",
+ * )
+ * 
+ * @OA\Server(
+ *      url="http://sms.test/api",
+ *      description="Test API Server"
+ * )
+ */
 class SmsGlobalController extends Controller
 {
 
 
     /**
-     * It sends an SMS for the user.
+     * @OA\Post(
+     *      path="/message",
+     *      @OA\RequestBody(
+     *          required=true,
+     *          @OA\JsonContent(ref="#/components/schemas/SendMessageRequest")
+     *      ),
+     *      @OA\Response(
+     *          response="200", 
+     *          description="send an SMS to a user with success"
+     *      ),
+     *      @OA\Response(
+     *          response="400", 
+     *          description="handled error"
+     *      ),
+     *      @OA\Response(
+     *          response="403", 
+     *          description="authentication error"
+     *      ),
+     * )
      */
     public function post_message(Request $request): JsonResponse
     {
@@ -67,7 +97,25 @@ class SmsGlobalController extends Controller
 
 
     /**
-     * It lists all the messages sent by the user.
+     * @OA\Get(
+     *      path="/message",
+     *      @OA\RequestBody(
+     *          required=true,
+     *          @OA\JsonContent(ref="#/components/schemas/GetMessagesRequest")
+     *      ),
+     *      @OA\Response(
+     *          response="200", 
+     *          description="list all the messages sent by a user with success"
+     *      ),
+     *      @OA\Response(
+     *          response="400", 
+     *          description="handled error"
+     *      ),
+     *      @OA\Response(
+     *          response="403", 
+     *          description="authentication error"
+     *      ),
+     * )
      */
     public function get_message(Request $request): JsonResponse
     {
