@@ -236,8 +236,14 @@
     <h4 class="field-label">400</h4>
     handled error
         <a href="#"></a>
-    <h4 class="field-label">403</h4>
+    <h4 class="field-label">401</h4>
     authentication error
+        <a href="#"></a>
+    <h4 class="field-label">403</h4>
+    authorization error
+        <a href="#"></a>
+    <h4 class="field-label">422</h4>
+    validation error
         <a href="#"></a>
   </div> <!-- method -->
   <hr/>
@@ -271,8 +277,14 @@
     <h4 class="field-label">400</h4>
     handled error
         <a href="#"></a>
-    <h4 class="field-label">403</h4>
+    <h4 class="field-label">401</h4>
     authentication error
+        <a href="#"></a>
+    <h4 class="field-label">403</h4>
+    authorization error
+        <a href="#"></a>
+    <h4 class="field-label">422</h4>
+    validation error
         <a href="#"></a>
   </div> <!-- method -->
   <hr/>
