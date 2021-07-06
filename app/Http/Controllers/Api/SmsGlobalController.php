@@ -42,9 +42,18 @@ class SmsGlobalController extends Controller
      *          description="handled error"
      *      ),
      *      @OA\Response(
-     *          response="403", 
+     *          response="401", 
      *          description="authentication error"
      *      ),
+     *      @OA\Response(
+     *          response="403", 
+     *          description="authorization error"
+     *      ),
+     *      @OA\Response(
+     *          response="422", 
+     *          description="validation error"
+     *      ), 
+     * 
      * )
      */
     public function post_message(Request $request): JsonResponse
@@ -125,8 +134,16 @@ class SmsGlobalController extends Controller
      *          description="handled error"
      *      ),
      *      @OA\Response(
-     *          response="403", 
+     *          response="401", 
      *          description="authentication error"
+     *      ),
+     *      @OA\Response(
+     *          response="403", 
+     *          description="authorization error"
+     *      ),
+     *      @OA\Response(
+     *          response="422", 
+     *          description="validation error"
      *      ),
      * )
      */
