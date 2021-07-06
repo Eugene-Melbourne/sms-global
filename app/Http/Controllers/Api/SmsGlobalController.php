@@ -173,7 +173,8 @@ class SmsGlobalController extends Controller
             return response()->json($body)->setStatusCode(401);
         }
 
-        $broker = new SmsGlobalListMessagesBroker();
+        /* @var $broker SmsGlobalListMessagesBroker */
+        $broker = app(SmsGlobalListMessagesBroker::class);
         $broker
             ->setApiKeyPublic($username)
             ->setApiKeySecret($password)
