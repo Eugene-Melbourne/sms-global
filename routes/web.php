@@ -18,5 +18,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('docs/yaml', [SmsGlobalDocsController::class, 'get_yaml'])
+    ->name('docs.yaml');
+
 Route::get('docs', [SmsGlobalDocsController::class, 'get_docs'])
     ->name('docs');

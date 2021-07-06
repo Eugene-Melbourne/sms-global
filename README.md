@@ -3,6 +3,15 @@
 - <a href="https://laravel.com" target="_blank"> Laravel Framework v7.30.4 </a>
 - <a href="https://smsglobal.com" target="_blank"> SMSGlobal </a>
 
+## To display a <a href="https://swagger.io/" target="_blank"> Swagger </a> OpenAPI documentation of the `/api` endpoints. 
+
+### Compiled documentation is available at URL
+- /docs
+
+### YAML file for Swagger is available at URL
+- /docs/yaml
+
+
 ## About API
 
 API endpoints ask a user to provide their API Keys that they have generated on SMSGlobal for their own accounts.
@@ -33,9 +42,3 @@ API endpoints ask a user to provide their API Keys that they have generated on S
 - Type : "Basic Auth"
 - Username "take your REST API Key from <a href="https://smsglobal.com" target="_blank"> SMSGlobal </a>"
 - Password "take your REST API Secret from <a href="https://smsglobal.com" target="_blank"> SMSGlobal </a>"
-
-## To display a <a href="https://swagger.io/" target="_blank"> Swagger </a> OpenAPI documentation of the `/api` endpoints. 
-- method: **GET**
-- end point: **/docs**
-- authentication: "no"
-- details: return YAML file for Swagger
