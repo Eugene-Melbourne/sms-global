@@ -249,20 +249,14 @@
     <div class="method-notes"></div>
 
 
-    <h3 class="field-label">Consumes</h3>
-    This API call consumes the following media types via the <span class="header">Content-Type</span> request header:
-    <ul>
-      <li><code>application/json</code></li>
-    </ul>
 
-    <h3 class="field-label">Request body</h3>
+
+
+    <h3 class="field-label">Query parameters</h3>
     <div class="field-items">
-      <div class="param">body <a href="#GetMessagesRequest">GetMessagesRequest</a> (required)</div>
+      <div class="param">destination_number (required)</div>
       
-            <div class="param-desc"><span class="param-type">Body Parameter</span> &mdash;  </div>
-                </div>  <!-- field-items -->
-
-
+            <div class="param-desc"><span class="param-type">Query Parameter</span> &mdash; destination number </div>    </div>  <!-- field-items -->
 
 
 
@@ -288,18 +282,9 @@
 
   <h3>Table of Contents</h3>
   <ol>
-    <li><a href="#GetMessagesRequest"><code>GetMessagesRequest</code> - Get Messages request</a></li>
     <li><a href="#SendMessageRequest"><code>SendMessageRequest</code> - Send Message request</a></li>
   </ol>
 
-  <div class="model">
-    <h3><a name="GetMessagesRequest"><code>GetMessagesRequest</code> - Get Messages request</a> <a class="up" href="#__Models">Up</a></h3>
-    <div class='model-description'>Get Messages request body data</div>
-    <div class="field-items">
-      <div class="param">destination_number </div><div class="param-desc"><span class="param-type"><a href="#string">String</a></span> destination number </div>
-          <div class="param-desc"><span class="param-type">example: +61000000000</span></div>
-    </div>  <!-- field-items -->
-  </div>
   <div class="model">
     <h3><a name="SendMessageRequest"><code>SendMessageRequest</code> - Send Message request</a> <a class="up" href="#__Models">Up</a></h3>
     <div class='model-description'>Send Message request body data</div>

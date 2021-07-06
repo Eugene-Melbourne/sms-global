@@ -99,9 +99,14 @@ class SmsGlobalController extends Controller
     /**
      * @OA\Get(
      *      path="/message",
-     *      @OA\RequestBody(
+     *      @OA\Parameter(
+     *          name="destination_number",
+     *          in="query",
      *          required=true,
-     *          @OA\JsonContent(ref="#/components/schemas/GetMessagesRequest")
+     *          description="destination number",
+     *          @OA\Schema(
+     *              type="string"
+     *          ),
      *      ),
      *      @OA\Response(
      *          response="200", 
