@@ -7,6 +7,7 @@ use App\Brokers\SmsGlobalSendSmsBroker;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
+use function app;
 use function response;
 
 /**
@@ -68,8 +69,15 @@ class SmsGlobalController extends Controller
 
         $username = $request->getUser();
         $password = $request->getPassword();
+        if (is_null($username) || is_null($password)) {
+            $body = [
+                'message' => 'Basic auth is needed',
+            ];
+            return response()->json($body)->setStatusCode(401);
+        }
 
-        $broker = new SmsGlobalSendSmsBroker();
+        /* @var $broker SmsGlobalSendSmsBroker */
+        $broker = app(SmsGlobalSendSmsBroker::class);
         $broker
             ->setApiKeyPublic($username)
             ->setApiKeySecret($password)
@@ -141,6 +149,12 @@ class SmsGlobalController extends Controller
 
         $password = $request->getPassword();
         $username = $request->getUser();
+        if (is_null($username) || is_null($password)) {
+            $body = [
+                'message' => 'Basic auth is needed',
+            ];
+            return response()->json($body)->setStatusCode(401);
+        }
 
         $broker = new SmsGlobalListMessagesBroker();
         $broker
