@@ -19,7 +19,7 @@ API endpoints ask a user to provide their API Keys that they have generated on S
 - end point: **/api/message**
 - body Json example: **{"destination_number":"+61000000000"}** (please replace the example data with real values)
 - authentication: "Basic Auth"
-- status: not functional
+- status: functional
 
 ### API Specification
 

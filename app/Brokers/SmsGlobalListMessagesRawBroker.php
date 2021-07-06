@@ -55,7 +55,7 @@ class SmsGlobalListMessagesRawBroker
     {
         $uri                 = '/v2/sms';
         $domain              = 'api.smsglobal.com';
-        $method              = 'POST';
+        $method              = 'GET';
         $timestamp           = time();
         $nonce               = md5(microtime() . mt_rand());
         $port                = 443;
@@ -76,7 +76,6 @@ class SmsGlobalListMessagesRawBroker
             "origin"       => ''
         ];
         $jsonPayload   = json_encode($payload, JSON_FORCE_OBJECT);
-        $method        = 'POST';
         $url           = 'https://' . $domain . $uri;
         $clientVersion = '1.0.4';
         $userAgent     = "SMSGlobal-SDK/v2 Version/" . $clientVersion . " PHP/" . PHP_VERSION . " (" . PHP_OS . "; " . OPENSSL_VERSION_TEXT . ")";
@@ -91,6 +90,8 @@ class SmsGlobalListMessagesRawBroker
 
         try {
             $this->response = $client->request($method, $url, $options);
+            //logger($this->response->getBody());
+            //logger($this->response->getHeaders());
         } catch (GuzzleException $e) {
             $this->exception = $e;
             //logger($e->getMessage());

@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Api;
 
-use App\Brokers\SmsGlobalListMessagesBroker;
+use App\Brokers\SmsGlobalListMessagesRawBroker;
 use App\Brokers\SmsGlobalSendSmsBroker;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\JsonResponse;
@@ -137,7 +137,7 @@ class SmsGlobalController extends Controller
         $password = $request->getPassword();
         $username = $request->getUser();
 
-        $broker = new SmsGlobalListMessagesBroker();
+        $broker = new SmsGlobalListMessagesRawBroker();
         $broker
             ->setApiKeyPublic($username)
             ->setApiKeySecret($password)
@@ -158,7 +158,9 @@ class SmsGlobalController extends Controller
             return $response;
         }
 
-        return response()->json($broker->getResponse())->setStatusCode(200);
+        $responseBody = json_decode((string) $broker->getResponse()->getBody());
+
+        return response()->json($responseBody)->setStatusCode(200);
     }
 
 
