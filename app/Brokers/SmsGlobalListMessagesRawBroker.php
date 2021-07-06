@@ -11,7 +11,6 @@ use function json_encode;
 /**
  * @property string     $username
  * @property string     $password
- * @property string     $message
  * @property string     $destinationNumber
  * @property array      $response
  * @property Exception  $exception
@@ -19,7 +18,6 @@ use function json_encode;
 class SmsGlobalListMessagesRawBroker
 {
 
-    private $message;
     private $username;
     private $password;
     private $destinationNumber;
@@ -72,8 +70,8 @@ class SmsGlobalListMessagesRawBroker
         $client = new Client();
 
         $payload       = [
-            "destinations" => $this->destinationNumber,
-            "origin"       => ''
+            "destination" => $this->destinationNumber,
+            "origin"      => ''
         ];
         $jsonPayload   = json_encode($payload, JSON_FORCE_OBJECT);
         $url           = 'https://' . $domain . $uri;
