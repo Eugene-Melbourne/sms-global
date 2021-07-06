@@ -19,10 +19,12 @@ use Illuminate\Support\Facades\Route;
 //});
 
 
-Route::group([], function () {
-    Route::post('/message', [SmsGlobalController::class, 'post_message'])
+Route::name('api.')
+    ->group(function () {
+
+        Route::post('/message', [SmsGlobalController::class, 'post_message'])
         ->name('message-post');
 
-    Route::get('/message', [SmsGlobalController::class, 'get_message'])
+        Route::get('/message', [SmsGlobalController::class, 'get_message'])
         ->name('message-get');
-});
+    });
